@@ -1,0 +1,106 @@
+/* All code：*/
+/* 12.24	计算pi的值 pi.c */
+/* 1.19 	自写字符串函数 string.c */
+/* 1.21	数与逻辑	number.c */
+/* 1.23	打印日历 calendar.c */
+/* 1.23	递归和迭代 interation.c */
+/* 1.26	位操作 bit.c */
+/* 1.29	超过整型数的加法和猜数字 homework.c */
+
+12.24
+/* factorial.c pi.c */
+int factorial(int num); //阶乘
+int calculate_num(int num, int factorial_sheet[]); 各位数字之和
+double calculate_pi(int num); //第一种公式计算pi
+double calculate_pi_2(int num); //第二种公式计算pi
+
+12.30
+/* palindromic.c 回文 */
+int if_palindromic(char word[]); //反转判断
+int if_palindromic_num(int num); //数组判断
+int if_palindromic_3(int num);   //迭代判断
+
+1.18
+/* littletobig.c*/
+void littletobig(char a); //小写字母转换大写
+
+1.19
+/* find_nine.c*/
+find_nine(int num); //100以内有几个9,个位十位都算
+/* number.c */
+int if_water_number(int num); //判断是否是水仙花数
+/* prime_number.c*/
+int if_prime_number(int num); //判断是否是素数
+/* totalnum.c*/
+int total(int num); //计算整型数各位置之和
+/* string.c 字符串的相关操作*/
+int my_strcpy(char *str1, char *str2); //自写比较两个字符串是否相等
+int my_strlen(char *str);		//自写计算字符串长度
+int my_strlen_space(char *str);		//自写计算字符串中单词的长度
+char *my_strcpy(char *str1, char *str2);//自写拷贝字符串
+char *my_strncpy(char *str1, char *str2, int n); //自写拷贝字符串，拷贝其中的n位
+char *reverse(char *str);		//自写反转字符串
+char *reverse_words(char *str);		//自写反转单词
+int *my_atoi(char *str);		//自写字符串转换整形数
+double my_atof(char *str);		//自写字符串转换浮点型小数
+
+1.21
+/* number.c 数的相关操作*/
+int if_pefect_number(int num);  //判断是否是完数
+int if_water_number(int num);   //判断是不是水仙花数
+int total(int num);             //求一个数各个 位上数字之和
+int if_prime_number(int num);   //判断是否是素数
+int if_have_nine();             //是否有9
+int factorial(int num);         //阶乘
+void add_number();              //斐波那契数列
+void find_factorial_num();      //abc = a! + b! + c!
+void decimal_to_binary(int num);//十进制转换二进制
+void decimal_to_octal(int num); //十进制转换八进制
+void find_water_number();       //打印所有水仙花数
+void decimal_to_hexadecimal(int num);//十进制转换十六进制
+void find_pefect_number();      //打印所有完数
+void find_prime_number();       //打印所有素数
+void find_nine();               //100以内有多少9
+void swap(int *num1, int *num2);//交换两个数
+/* search_and_sort.c*/
+void bubble_sort(int *sheet, int len_of_sheet); //冒泡法排序
+int search(int *sheet, int len_of_sheet, int search_number); //二分法查找
+/* static.c test.c 静态数据取存储变量*/
+
+1.23
+/* calendar.c 打印年份日历*/
+int zeller(int century, int year, int month, int day); // 蔡勒公式
+int day_cycle(int century, int year, int month, int *month_array);  //天数循环
+void print_day(int month, int day, int week, int *month_array); //顺序打印某一天
+void month_cycle(int century, int year);    //月份循环
+/* interation 迭代和递归*/
+int min(int a, int b);  //返回两个数中较小的数
+int rec_fibonacci(int n);   //递归--fibonacci数列
+int ite_fibonacci(int n);   //迭代--fibonacci数列
+int recursion_factorial(int num);   //递归--阶乘
+int highest_common_factor(int num_one, int num_two); //递归--最大公约数
+int iteration_search(int *sheet, int len_of_sheet, int search_num); //迭代--二分法查找
+int recursion_search(int *sheet, int low, int high, int search_num);//递归--二分法查找
+void count_step();  //记步函数
+void swap(int *num_one, int *num_two);  //交换两个数
+void hanoi(int from, int aux,int to,int n); //递归--汉诺塔解法
+void print_sheet(int *sheet, int len_of_sheet); //打印数组
+void end_to_begin(char *sheet); //递归--字符串逆序
+void iteration_bubble_sort(int *sheet, int len_of_sheet);   //迭代--冒泡法排序
+
+1.26
+/* bit.c 位操作*/
+int cnt_bit_1(unsigned char num); //计算有多少二进制的1
+void print_bin(unsigned int num);   //二进制形式打印
+unsigned int encrypt(unsigned int num); //加密算法
+unsigned int a_length_of_bit(unsigned int num, int begin, int end); //取出begin--end
+unsigned int ro_a_length_of_bit(unsigned int num, int begin, int end);//b--e并取反
+unsigned int change_bit(unsigned int num, int position, int bnum);  //修改目标bit的值
+unsigned int ror(unsigned int num, unsigned int times); //循环右移
+unsigned int ror2(unsigned int num, unsigned int times);    //循环右移
+
+1.29
+/* homework.c 超过int型的数阶乘*/
+void guess_num(); //猜数字
+int *more_then_int(int times, int store_num[times]); //40阶乘
+int *add(int *store_num, int *add_num); //两个数组的数相加
